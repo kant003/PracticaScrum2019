@@ -2,6 +2,12 @@ package PracticasScrum;
 
 public class Utilidades {
 	
+
+	public static char mostrarUltimaLetra() {
+		
+		return ' ';
+	}
+
 	void hola() {
 	
 	}
@@ -9,5 +15,6 @@ public class Utilidades {
 	String saluda(){
 		return "Hola";
 	}
+
 
 }
