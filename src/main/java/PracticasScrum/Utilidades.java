@@ -6,4 +6,8 @@ public class Utilidades {
 	
 	}
 
+	String saluda(){
+		return "Hola";
+	}
+
 }
