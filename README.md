@@ -1,3 +1,9 @@
+# Introducción
+
+Repositorio para practicar con desarrollo ágil Scrum
+Ver el fichero [CONTRIBUTING.md](CONTRIBUTING.md). para saber como colaborar con el proyecto
+
+
 # Montaje del servidor de Base de Datos MySQL usando docker
 
 Usaremos los siguientes comandos:
@@ -10,3 +16,8 @@ Usaremos los siguientes comandos:
 
 
 _Contraseña del servidor: Ad1234_
+
+
+# Mockup borrador 
+
+![Mookup](Mockup.PNG "Mockup")
