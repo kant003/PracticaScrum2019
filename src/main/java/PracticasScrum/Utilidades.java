@@ -4,6 +4,7 @@ import java.io.File;
 
 public class Utilidades {
 
+
 	
 	private final static String NOMBRE_FICHERO = "historial.txt";
 	
@@ -22,7 +23,6 @@ public class Utilidades {
 			'A','E','I','O','U',
 			'á', 'é', 'í','ó','ú',
 			'Á','É','Í','Ó','Ú' };
-
 
 
 

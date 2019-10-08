@@ -27,8 +27,10 @@ public class UtilidadesTest {
 		assertNotEquals(0, Utilidades.contarVocales("a"));
 		assertEquals(0, Utilidades.contarVocales("ccc"));
 
+
 		assertEquals(5, Utilidades.contarVocales("cácécícócú"));
 		assertEquals(5, Utilidades.contarVocales("CÁCÉCÍCÓCÚ"));
+
 
 
 
@@ -39,7 +41,16 @@ public class UtilidadesTest {
 		assertEquals(2,  Utilidades.contarLetrasA("aa"));
 		assertEquals(2,  Utilidades.contarLetrasA("Áa"));
 		assertEquals(3,  Utilidades.contarLetrasA("Áaá"));
-		
+
+	}
+	
+	@Test
+	public void testearMinusculas() {
+		assertEquals("abcdefg", Utilidades.textoMinuscula("ABCDEFG"));
+		assertEquals("111aa1", Utilidades.textoMinuscula("111Aa1"));
+		assertEquals("ñññ", Utilidades.textoMinuscula("ÑÑÑ"));
+		assertEquals("áéíóú", Utilidades.textoMinuscula("ÁÉÍÓÚ"));
+
 	}
 
 }
