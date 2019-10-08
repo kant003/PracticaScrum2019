@@ -8,6 +8,7 @@ public class UtilidadesTest {
 
 	@Test
 	public void test() {
+
 		assertEquals(22, Utilidades.contarVocales(
 				"Ejemplo de texto de prueba con valores mayUsculAs y mInuscUlas"
 				));
@@ -15,8 +16,16 @@ public class UtilidadesTest {
 		assertEquals(2, Utilidades.contarVocales("ae"));
 		assertNotEquals(0, Utilidades.contarVocales("a"));
 		assertEquals(0, Utilidades.contarVocales("ccc"));
-		assertEquals(5, Utilidades.contarVocales("cÁcÉcÍcÓcÚ"));
-		assertEquals(5, Utilidades.contarVocales("cácácícócú"));
+		assertEquals(5, Utilidades.contarVocales("cï¿½cï¿½cï¿½cï¿½cï¿½"));
+		assertEquals(5, Utilidades.contarVocales("cï¿½cï¿½cï¿½cï¿½cï¿½"));
+
+		
+		assertEquals(5,  Utilidades.contarLetrasA("aaaaa"));
+		assertEquals(1,  Utilidades.contarLetrasA("a"));
+		assertEquals(0,Utilidades.contarLetrasA(""));
+		assertEquals(2,  Utilidades.contarLetrasA("aa"));
+		
+
 	}
 
 }
