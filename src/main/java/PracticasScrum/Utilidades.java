@@ -1,13 +1,31 @@
 package PracticasScrum;
 
+import java.io.File;
+
 public class Utilidades {
 
-	private final static char[] VOCALES = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U', '�', '�', '�', '�', '�',
-			'�', '�', '�', '�', '�' };
-
-	public static char mostrarUltimaLetra(String texto) {
-		return texto.charAt(texto.length() - 1);
+	
+	private final static String NOMBRE_FICHERO = "historial.txt";
+	
+	public static void eliminarHistorial() {
+		try {
+		File f = new File (NOMBRE_FICHERO);
+		f.delete();
+		}catch(Exception e){
+			System.out.println("El archivo no existe");
+		}
 	}
+	
+
+	private final static char[] VOCALES = {
+			'a','e','i','o','u',
+			'A','E','I','O','U',
+			'á', 'é', 'í','ó','ú',
+			'Á','É','Í','Ó','Ú' };
+
+
+
+
 
 	public static char mostrarUltimaLetra() {
 
