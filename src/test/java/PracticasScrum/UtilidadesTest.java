@@ -5,6 +5,16 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class UtilidadesTest {
+	
+	@Test
+	public void testMostrarUltimaLetra() {
+		char resultado=' ';
+		resultado=Utilidades.mostrarUltimaLetra("Hola que tal");
+		assertEquals(resultado,'l');
+		resultado=Utilidades.mostrarUltimaLetra("Hola que tal estas mi querido amigo");
+		assertEquals(resultado,'o');
+	}
+
 
 	@Test
 	public void test() {
