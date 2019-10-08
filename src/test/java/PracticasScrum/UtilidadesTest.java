@@ -27,5 +27,17 @@ public class UtilidadesTest {
 		
 
 	}
+	
+	@Test
+	public void testCaracteresPares() {
+		
+		assertTrue(Utilidades.caracteresPares("Cadena con caracteres pares"));
+		//Mismo texto con espacios intercalados que deberan ser obviados
+		assertTrue(Utilidades.caracteresPares("Cadena     con      caracteres    pares"));
+		assertFalse(Utilidades.caracteresPares("Cadena con caracteres impares."));
+		//Mismo texto con espacios intercalados que deberan ser obviados
+		assertFalse(Utilidades.caracteresPares("Cadena        con   caracteres    impares."));
+		
+	}
 
 }
