@@ -16,6 +16,11 @@ public class Utilidades {
 		return "Hola";
 	}
 
+	public static String textoMinuscula(String texto) {
+		
+		return texto.toLowerCase();
+		
+	}
 
 	public static boolean caracteresPares(String texto) {
 		
