@@ -52,6 +52,12 @@ public class Utilidades {
 		return texto.toLowerCase();
 		
 	}
+	
+	public static String quitaEspacios(String frase) {
+
+		return frase.replace(" ", "");
+
+	}
 
 	public static boolean caracteresPares(String texto) {
 		
