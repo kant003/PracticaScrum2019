@@ -1,6 +1,19 @@
 package PracticasScrum;
 
+import java.io.File;
+
 public class Utilidades {
+	
+	private final static String NOMBRE_FICHERO = "historial.txt";
+	
+	public static void eliminarHistorial() {
+		try {
+		File f = new File (NOMBRE_FICHERO);
+		f.delete();
+		}catch(Exception e){
+			System.out.println("El archivo no existe");
+		}
+	}
 	
 
 	private final static char[] VOCALES = {
