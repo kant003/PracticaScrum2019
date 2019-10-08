@@ -21,7 +21,7 @@ public class Utilidades {
 		int contador=0;
 		
 		for(int i=0;i<texto.length();i++) {
-			if(texto.charAt(i)=='a'|| texto.charAt(i)== 'A') {
+			if(texto.charAt(i)=='a'|| texto.charAt(i)== 'A' || texto.charAt(i)== 'á'|| texto.charAt(i)== 'Á') {
 				 contador ++;
 			}
 		}

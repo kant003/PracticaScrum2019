@@ -24,6 +24,8 @@ public class UtilidadesTest {
 		assertEquals(1,  Utilidades.contarLetrasA("a"));
 		assertEquals(0,Utilidades.contarLetrasA(""));
 		assertEquals(2,  Utilidades.contarLetrasA("aa"));
+		assertEquals(2,  Utilidades.contarLetrasA("Áa"));
+		assertEquals(3,  Utilidades.contarLetrasA("Áaá"));
 		
 
 	}
