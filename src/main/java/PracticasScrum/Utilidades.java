@@ -84,4 +84,16 @@ public class Utilidades {
 
 	}
 
+	
+	public static int extensionDeCaracteres(String texto ) {
+		int longitud = 0;
+		String extensionCaracteres= texto.replaceAll("\\s", "");
+		for(int i=0;i<extensionCaracteres.length();i++) {
+			longitud++;
+		}
+		
+		return longitud;
+	}
+	
+r
 }
