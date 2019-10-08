@@ -2,7 +2,11 @@ package PracticasScrum;
 
 public class Utilidades {
 	
-	private final static char[] VOCALES = {'a','e','i','o','u','A','E','I','O','U','¡', '…', 'Õ','”','⁄','·','È','Ì','Û','˙' };
+	private final static char[] VOCALES = {
+			'a','e','i','o','u',
+			'A','E','I','O','U',
+			'√°', '√©', '√≠','√≥','√∫',
+			'√Å','√â','√ç','√ì','√ö' };
 	
 	void hola() {
 	

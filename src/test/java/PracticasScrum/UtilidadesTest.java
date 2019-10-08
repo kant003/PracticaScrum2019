@@ -15,8 +15,8 @@ public class UtilidadesTest {
 		assertEquals(2, Utilidades.contarVocales("ae"));
 		assertNotEquals(0, Utilidades.contarVocales("a"));
 		assertEquals(0, Utilidades.contarVocales("ccc"));
-		assertEquals(5, Utilidades.contarVocales("cÁcÉcÍcÓcÚ"));
-		assertEquals(5, Utilidades.contarVocales("cácácícócú"));
+		assertEquals(5, Utilidades.contarVocales("cÃ¡cÃ©cÃ­cÃ³cÃº"));
+		assertEquals(5, Utilidades.contarVocales("CÃCÃ‰CÃCÃ“CÃš"));
 	}
 
 }
