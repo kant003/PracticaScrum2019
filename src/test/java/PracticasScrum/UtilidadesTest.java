@@ -19,6 +19,10 @@ public class UtilidadesTest {
 		assertEquals(5, Utilidades.contarVocales("c�c�c�c�c�"));
 		assertEquals(5, Utilidades.contarVocales("c�c�c�c�c�"));
 
+		assertEquals("abcdefg", Utilidades.textoMinuscula("ABCDEFG"));
+		assertEquals("111aa1", Utilidades.textoMinuscula("111Aa1"));
+		assertEquals("ñññ", Utilidades.textoMinuscula("ÑÑÑ"));
+		assertEquals("áéíóú", Utilidades.textoMinuscula("ÁÉÍÓÚ"));
 		
 		assertEquals(5,  Utilidades.contarLetrasA("aaaaa"));
 		assertEquals(1,  Utilidades.contarLetrasA("a"));
