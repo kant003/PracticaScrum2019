@@ -3,8 +3,13 @@ package PracticasScrum;
 public class Utilidades {
 	
 
-	private final static char[] VOCALES = {'a','e','i','o','u','A','E','I','O','U','�', '�', '�','�','�','�','�','�','�','�' };
-	
+	private final static char[] VOCALES = {
+			'a','e','i','o','u',
+			'A','E','I','O','U',
+			'á', 'é', 'í','ó','ú',
+			'Á','É','Í','Ó','Ú' };
+
+
 
 
 	public static char mostrarUltimaLetra() {
