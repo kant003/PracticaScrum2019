@@ -1,4 +1,4 @@
-package PracticasScrum;
+﻿package PracticasScrum;
 
 import java.io.File;
 
@@ -27,9 +27,9 @@ public class Utilidades {
 
 
 
-	public static char mostrarUltimaLetra() {
+	public static char mostrarUltimaLetra(String texto) {
 
-		return ' ';
+		return texto.charAt(texto.length()-1);
 	}
 
 	void hola() {
