@@ -13,6 +13,8 @@ Usaremos los siguientes comandos:
 > docker run -d -p 3306:3306 --name mysql4 -e MYSQL_ROOT_PASSWORD=Ad1234 mysql:5.7 --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 - Y por ultimo iniciamos el servidor
 > docker start mysql4
+- Entrar en mysql
+> docker exec -it mysql4 mysql -uroot -p
 
 
 _Contraseña del servidor: Ad1234_
