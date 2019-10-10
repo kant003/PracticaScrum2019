@@ -7,6 +7,15 @@ import org.junit.Test;
 public class UtilidadesTest {
 
 	@Test
+	public void testMostrarPrimeraLetra() {
+		char resultado=' ';
+		resultado=Utilidades.mostrarPrimeraletra("Buenas tardes");
+		assertEquals(resultado,'B');
+		resultado=Utilidades.mostrarPrimeraletra("Maricarmen");
+		assertEquals(resultado,'M');
+  }
+  
+  @Test
 	public void testMostrarUltimaLetra() {
 	char resultado = ' ';
 	resultado = Utilidades.mostrarUltimaLetra("Hola que tal");
@@ -61,8 +70,6 @@ public class UtilidadesTest {
 	public void testExtensionCaracteres() {
 		assertEquals(10, Utilidades.extensionDeCaracteres("Cabra al sol"));
 		assertEquals(10, Utilidades.extensionDeCaracteres("Cab   ra  a  l    sol"));
-
-		
 	}
 
 }

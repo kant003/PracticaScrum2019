@@ -1,8 +1,13 @@
-﻿package PracticasScrum;
+package PracticasScrum;
 
 import java.io.File;
 
 public class Utilidades {
+
+
+		public static char mostrarPrimeraletra(String texto) {
+			return texto.charAt(0);
+		}
 
 
 	
