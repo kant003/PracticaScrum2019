@@ -11,6 +11,8 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class InterfazDeTrabajo {
 
@@ -66,6 +68,11 @@ public class InterfazDeTrabajo {
 		panel.add(btnCalcular, gbc_btnCalcular);
 		
 		JButton btnLimpiar = new JButton("Limpiar");
+		btnLimpiar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				txtFrase.setText("");
+			}
+		});
 		GridBagConstraints gbc_btnLimpiar = new GridBagConstraints();
 		gbc_btnLimpiar.insets = new Insets(0, 0, 5, 0);
 		gbc_btnLimpiar.gridx = 0;
