@@ -95,7 +95,7 @@ public class Utilidades {
 
 	}
 	
-	public static void tipoCaracter(String cadena) {
+	public static String tipoCaracter(String cadena) {
 
 		int contNum = 0;
 		int contLetra = 0;
@@ -112,11 +112,13 @@ public class Utilidades {
 		}
 
 		if (cadena.length() == contNum) {
-			System.out.println("La frase solo contiene caracteres numéricos");
+			return "La frase solo contiene caracteres numéricos";
 		} else if (cadena.length() == contLetra) {
-			System.out.println("La frase solo contiene letras");
+			return "La frase solo contiene letras";
 		} else if (cadena.length() == (contLetra + contNum)) {
-			System.out.println("La frase esta formada por caracteres alfanuméricos");
+			return "La frase esta formada por caracteres alfanuméricos";
+		}else {
+			return "";
 		}
 	}
 
