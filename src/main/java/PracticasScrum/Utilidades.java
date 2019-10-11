@@ -4,28 +4,19 @@ import java.io.File;
 
 public class Utilidades {
 
-
-	
 	private final static String NOMBRE_FICHERO = "historial.txt";
-	
+
 	public static void eliminarHistorial() {
 		try {
-		File f = new File (NOMBRE_FICHERO);
-		f.delete();
-		}catch(Exception e){
+			File f = new File(NOMBRE_FICHERO);
+			f.delete();
+		} catch (Exception e) {
 			System.out.println("El archivo no existe");
 		}
 	}
-	
 
-	private final static char[] VOCALES = {
-			'a','e','i','o','u',
-			'A','E','I','O','U',
-			'á', 'é', 'í','ó','ú',
-			'Á','É','Í','Ó','Ú' };
-
-
-
+	private final static char[] VOCALES = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U', 'á', 'é', 'í', 'ó', 'ú',
+			'Á', 'É', 'Í', 'Ó', 'Ú' };
 
 	public static char mostrarUltimaLetra() {
 
@@ -84,16 +75,20 @@ public class Utilidades {
 
 	}
 
-	
-	public static int extensionDeCaracteres(String texto ) {
+	public static int extensionDeCaracteres(String texto) {
 		int longitud = 0;
-		String extensionCaracteres= texto.replaceAll("\\s", "");
-		for(int i=0;i<extensionCaracteres.length();i++) {
+		String extensionCaracteres = texto.replaceAll("\\s", "");
+		for (int i = 0; i < extensionCaracteres.length(); i++) {
 			longitud++;
 		}
-		
+
 		return longitud;
 	}
-	
+
+	public static double porcentajeLetrasA(String texto) {
+
+		return (contarVocales(texto) * 100) / extensionDeCaracteres(texto);
+
+	}
 
 }
