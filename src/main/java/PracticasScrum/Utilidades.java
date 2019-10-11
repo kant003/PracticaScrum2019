@@ -5,6 +5,11 @@ import java.io.File;
 public class Utilidades {
 
 
+		public static char mostrarPrimeraletra(String texto) {
+			return texto.charAt(0);
+		}
+
+
 	
 	private final static String NOMBRE_FICHERO = "historial.txt";
 	
@@ -27,9 +32,9 @@ public class Utilidades {
 
 
 
-	public static char mostrarUltimaLetra() {
+	public static char mostrarUltimaLetra(String texto) {
 
-		return ' ';
+		return texto.charAt(texto.length()-1);
 	}
 
 	void hola() {
@@ -70,6 +75,12 @@ public class Utilidades {
 		return texto.toLowerCase();
 
 	}
+	
+	public static String quitaEspacios(String frase) {
+
+		return frase.replace(" ", "");
+
+	}
 
 	public static boolean caracteresPares(String texto) {
 
@@ -108,4 +119,18 @@ public class Utilidades {
 			System.out.println("La frase esta formada por caracteres alfanuméricos");
 		}
 	}
+
+	
+	public static int extensionDeCaracteres(String texto ) {
+		int longitud = 0;
+		String extensionCaracteres= texto.replaceAll("\\s", "");
+		for(int i=0;i<extensionCaracteres.length();i++) {
+			longitud++;
+		}
+		
+		return longitud;
+	}
+	
+
+
 }
