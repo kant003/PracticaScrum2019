@@ -94,6 +94,31 @@ public class Utilidades {
 		return pares;
 
 	}
+	
+	public static void tipoCaracter(String cadena) {
+
+		int contNum = 0;
+		int contLetra = 0;
+
+		cadena = cadena.replace(" ", "");
+
+		for (int i = 0; i < cadena.length(); i++) {
+			char letra = cadena.charAt(i);
+			if (Character.isDigit(letra)) {
+				contNum++;
+			} else if (Character.isLetter(letra)) {
+				contLetra++;
+			}
+		}
+
+		if (cadena.length() == contNum) {
+			System.out.println("La frase solo contiene caracteres numéricos");
+		} else if (cadena.length() == contLetra) {
+			System.out.println("La frase solo contiene letras");
+		} else if (cadena.length() == (contLetra + contNum)) {
+			System.out.println("La frase esta formada por caracteres alfanuméricos");
+		}
+	}
 
 	
 	public static int extensionDeCaracteres(String texto ) {
@@ -106,5 +131,6 @@ public class Utilidades {
 		return longitud;
 	}
 	
+
 
 }
