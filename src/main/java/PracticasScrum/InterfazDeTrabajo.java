@@ -188,6 +188,18 @@ public class InterfazDeTrabajo {
 		gbc_lblContVocales.gridy = 12;
 		panel_1.add(lblContVocales, gbc_lblContVocales);
 		
+		btnCalcular.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				lblContVocales.setText(
+						"Número de vocales: "+
+						String.valueOf( Utilidades.contarVocales(
+								txtFrase.getText()
+								))
+						);
+			}
+		});
+
+		
 		JLabel lblWebGatitos = new JLabel("Web de Gatitos");
 		GridBagConstraints gbc_lblWebGatitos = new GridBagConstraints();
 		gbc_lblWebGatitos.insets = new Insets(0, 0, 5, 5);
