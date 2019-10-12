@@ -23,15 +23,6 @@ public class Utilidades {
 	}
 	
 
-	private final static char[] VOCALES = {
-			'a','e','i','o','u',
-			'A','E','I','O','U',
-			'á', 'é', 'í','ó','ú',
-			'Á','É','Í','Ó','Ú' };
-
-
-
-
 	public static char mostrarUltimaLetra(String texto) {
 
 		return texto.charAt(texto.length()-1);
@@ -58,6 +49,18 @@ public class Utilidades {
 	}
 
 	public static int contarVocales(String txt) {
+		final char[] VOCALES = {
+				'a','e','i','o','u',
+				'á','é','í','ó','ú',
+				'à','è','ì','ò','ù',
+				'ä','ë','ï','ö','ü',
+				'ã','õ',
+				'A','E','I','O','U',
+				'Á','É','Í','Ó','Ú',
+				'À','È','Ì','Ò','Ù',
+				'Ä','Ë','Ï','Ö','Ü',
+				'Ã','Õ'};
+
 		int contador = 0;
 		for (int i = 0; i < txt.length(); i++) {
 			for (int x = 0; x < VOCALES.length; x++) {
