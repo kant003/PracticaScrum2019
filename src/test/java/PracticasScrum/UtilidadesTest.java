@@ -25,24 +25,25 @@ public class UtilidadesTest {
 	}
 
 	@Test
-	public void test() {
+	public void testContarVocales() {
 
 		assertEquals(22, Utilidades.contarVocales("Ejemplo de texto de prueba con valores mayUsculAs y mInuscUlas"));
 		assertEquals(1, Utilidades.contarVocales("a"));
-		assertEquals(2, Utilidades.contarVocales("ae"));
+		assertEquals(5, Utilidades.contarVocales("aeiou"));
 		assertNotEquals(0, Utilidades.contarVocales("a"));
-		assertEquals(0, Utilidades.contarVocales("ccc"));
+		assertEquals(5, Utilidades.contarVocales("abcdefghijklmnñopqrstuvwxyz"));
+		assertEquals(5, Utilidades.contarVocales("ABCDEFGHIJKLMNÑOPQRSTUVQXYZ"));
 
-		assertEquals(5, Utilidades.contarVocales("cácécícócú"));
-		assertEquals(5, Utilidades.contarVocales("CÁCÉCÍCÓCÚ"));
+		assertEquals(5, Utilidades.contarVocales("áéíóú"));
+		assertEquals(5, Utilidades.contarVocales("ÁÉÍÓÚ"));
 
-		assertEquals(5, Utilidades.contarLetrasA("aaaaa"));
-		assertEquals(1, Utilidades.contarLetrasA("a"));
-		assertEquals(0, Utilidades.contarLetrasA(""));
-		assertEquals(2, Utilidades.contarLetrasA("aa"));
-		assertEquals(2, Utilidades.contarLetrasA("Áa"));
-		assertEquals(3, Utilidades.contarLetrasA("Áaá"));
-
+		assertEquals(5, Utilidades.contarVocales("àèìòù"));
+		assertEquals(5, Utilidades.contarVocales("ÁÉÍÓÚ"));
+		
+		assertEquals(5, Utilidades.contarVocales("äëïöü"));
+		assertEquals(5, Utilidades.contarVocales("ÄËÏÖÜ"));
+		
+		assertEquals(4, Utilidades.contarVocales("ãõÃÕ"));
 	}
 
 	@Test
