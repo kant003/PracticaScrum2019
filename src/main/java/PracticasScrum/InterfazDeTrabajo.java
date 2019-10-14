@@ -18,6 +18,7 @@ public class InterfazDeTrabajo {
 
 	private JFrame frame;
 	private JTextField txtFrase;
+	private JLabel lblCaracParesImpares;
 
 	/**
 	 * Launch the application.
@@ -153,7 +154,7 @@ public class InterfazDeTrabajo {
 		gbc_lblMostrarPriLetra.gridy = 7;
 		panel_1.add(lblMostrarPriLetra, gbc_lblMostrarPriLetra);
 		
-		JLabel lblCaracParesImpares = new JLabel("Caracteres pares o impares");
+		lblCaracParesImpares = new JLabel("Caracteres pares o impares");
 		GridBagConstraints gbc_lblCaracParesImpares = new GridBagConstraints();
 		gbc_lblCaracParesImpares.insets = new Insets(0, 0, 5, 5);
 		gbc_lblCaracParesImpares.gridx = 1;
@@ -191,10 +192,14 @@ public class InterfazDeTrabajo {
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				lblContVocales.setText(
-						"Número de vocales: "+
+						"Nï¿½mero de vocales: "+
 						String.valueOf( Utilidades.contarVocales(
 								txtFrase.getText()
 								))
+						);
+				lblCaracParesImpares.setText(
+						"Caracteres pares: "+
+						String.valueOf( Utilidades.caracteresPares(txtFrase.getText()))
 						);
 			}
 		});
