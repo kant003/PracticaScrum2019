@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
 
 public class InterfazDeTrabajo {
 
@@ -203,14 +205,28 @@ public class InterfazDeTrabajo {
 						);
 			}
 		});
-
 		
-		JLabel lblWebGatitos = new JLabel("Web de Gatitos");
-		GridBagConstraints gbc_lblWebGatitos = new GridBagConstraints();
-		gbc_lblWebGatitos.insets = new Insets(0, 0, 5, 5);
-		gbc_lblWebGatitos.gridx = 1;
-		gbc_lblWebGatitos.gridy = 14;
-		panel_1.add(lblWebGatitos, gbc_lblWebGatitos);
+		JButton btnWebDeGatitos = new JButton("Web de gatitos");
+		GridBagConstraints gbc_btnWebDeGatitos = new GridBagConstraints();
+		gbc_btnWebDeGatitos.insets = new Insets(0, 0, 5, 5);
+		gbc_btnWebDeGatitos.gridx = 1;
+		gbc_btnWebDeGatitos.gridy = 14;
+		panel_1.add(btnWebDeGatitos, gbc_btnWebDeGatitos);
+		
+		btnWebDeGatitos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String url = new File("").getAbsolutePath() + "\\src\\main\\java\\PracticasScrum\\index.html";
+			        ProcessBuilder pb =
+			           new ProcessBuilder(
+			              "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", 
+			              url);
+			        pb.start();
+			    } catch (IOException error) {
+			        error.printStackTrace();
+			    }
+			}
+		});
 		
 		JButton btnAddBd = new JButton("A\u00F1adir a BD");
 		GridBagConstraints gbc_btnAddBd = new GridBagConstraints();
