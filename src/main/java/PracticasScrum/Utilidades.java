@@ -136,6 +136,8 @@ public class Utilidades {
 		return longitud;
 	}
 	
-
+	public static int porcentajeDeletrasA(String frase){
+		return (contarLetrasA(frase)*100)/extensionDeCaracteres(frase);
+	}
 
 }
