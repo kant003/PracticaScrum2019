@@ -72,5 +72,23 @@ public class UtilidadesTest {
 		assertEquals(10, Utilidades.extensionDeCaracteres("Cabra al sol"));
 		assertEquals(10, Utilidades.extensionDeCaracteres("Cab   ra  a  l    sol"));
 	}
+	
+	@Test
+	public void testPorcentajeDeletrasA() {
+		assertEquals(20, Utilidades.porcentajeDeletrasA("aeiou"));
+		assertEquals(20, Utilidades.porcentajeDeletrasA("aeiouaeiou"));
+		assertEquals(0, Utilidades.porcentajeDeletrasA("eiou"));
+		assertEquals(50, Utilidades.porcentajeDeletrasA("aAáaeeee"));
+		assertEquals(0, Utilidades.porcentajeDeletrasA("p4ssw0rd"));
+		assertEquals(40, Utilidades.porcentajeDeletrasA(".,aAáÁ_!-@"));
+		
+		assertEquals(20, Utilidades.porcentajeDeletrasA("aeiou aeiou"));
+		assertEquals(20, Utilidades.porcentajeDeletrasA("aeiouaeiou aeiouaeiou"));
+		assertEquals(0, Utilidades.porcentajeDeletrasA("eiou eiou"));
+		assertEquals(50, Utilidades.porcentajeDeletrasA("aAáaeeee aAáaeeee"));
+		assertEquals(0, Utilidades.porcentajeDeletrasA("p4ssw0rd p4ssw0rd"));
+		assertEquals(40, Utilidades.porcentajeDeletrasA(".,aAáÁ_!-@ .,aAáÁ_!-@"));
+
+	}
 
 }
