@@ -216,11 +216,11 @@ public class InterfazDeTrabajo {
 		btnWebDeGatitos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					String url = new File("").getAbsolutePath() + "\\src\\main\\java\\PracticasScrum\\index.html";
+					
 			        ProcessBuilder pb =
 			           new ProcessBuilder(
 			              "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe", 
-			              url);
+			              "https://gatitosrelajantes.000webhostapp.com/");
 			        pb.start();
 			    } catch (IOException error) {
 			        error.printStackTrace();
