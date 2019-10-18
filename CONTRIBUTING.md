@@ -17,11 +17,11 @@ git log --oneline
 
 ```
 
+
 ## Subimos la rama al repositorio remoto (push)
 ```
 git push origin UH4_T6
 ```
-
 
 
 ## ir al repositorio remoto de github
