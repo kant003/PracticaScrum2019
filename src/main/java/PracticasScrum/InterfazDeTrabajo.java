@@ -21,6 +21,7 @@ public class InterfazDeTrabajo {
 	private JFrame frame;
 	private JTextField txtFrase;
 	private JLabel lblCaracParesImpares;
+	private JLabel lblExtensionCarac;
 
 	/**
 	 * Launch the application.
@@ -135,7 +136,7 @@ public class InterfazDeTrabajo {
 		gbc_lblValiDni.gridy = 4;
 		panel_1.add(lblValiDni, gbc_lblValiDni);
 		
-		JLabel lblExtensionCarac = new JLabel("Extensi\u00F3n de caracteres");
+		lblExtensionCarac = new JLabel("Extensi\u00F3n de caracteres");
 		GridBagConstraints gbc_lblExtensionCarac = new GridBagConstraints();
 		gbc_lblExtensionCarac.insets = new Insets(0, 0, 5, 5);
 		gbc_lblExtensionCarac.gridx = 1;
@@ -199,6 +200,7 @@ public class InterfazDeTrabajo {
 								txtFrase.getText()
 								))
 						);
+				lblExtensionCarac.setText("Extesión de caracteres: "+String.valueOf(Utilidades.extensionDeCaracteres(txtFrase.getText())));
 				lblCaracParesImpares.setText(
 						"Caracteres pares: "+
 						String.valueOf( Utilidades.caracteresPares(txtFrase.getText()))
